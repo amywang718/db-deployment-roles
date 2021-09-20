@@ -5,7 +5,7 @@ Databricks documentation goes over how to [Create a cross-account IAM role](http
 
 ### Customer-managed VPC with secure cluster connectivity (no public IP / NPIP) with custom restrictions for account ID, VPC ID, region, and security group.
 
-Replace the following values in the policy with your own configuration values:
+Replace the following values in the [policy](e2-custom-vpc-policy) with your own configuration values:
 
 - `ACCOUNTID` : Your AWS account ID, which is a number.
 
