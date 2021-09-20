@@ -219,6 +219,11 @@
                     "ec2:vpc": "arn:aws:ec2:REGION:ACCOUNTID:vpc/VPCID"
                 }
             }
-        }
+        },
+        {
+          "Effect": "Allow",
+          "Action": "iam:PassRole",
+          "Resource": "arn:aws:iam::ACCOUNTID:role/S3ACCESSPROFILE"
+        },
     ]
 }

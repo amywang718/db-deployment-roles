@@ -23,3 +23,5 @@ Replace the following values in the [policy](e2-custom-vpc-policy) with your own
 - `SECURITYGROUPID-A` : ID of your AWS security group. When you add a security group restriction, you cannot reuse the cross-account IAM role or reference credentials ID (credentials_id) for any other workspaces. For those other workspaces, you must create separate roles, policies, and credentials objects.
 
 - `SECURITYGROUPID-B` : ID of your AWS security group. When you add a security group restriction, you cannot reuse the cross-account IAM role or reference credentials ID (credentials_id) for any other workspaces. For those other workspaces, you must create separate roles, policies, and credentials objects.
+
+- `S3ACCESSPROFILE` : Instance profile(s) typically for [Secure access to S3 buckets](https://docs.databricks.com/administration-guide/cloud-configurations/aws/instance-profiles.html#secure-access-to-s3-buckets-using-instance-profiles). Will typically be a list of resources of many profiles that can be pass through to the cluster ec2 instances.
