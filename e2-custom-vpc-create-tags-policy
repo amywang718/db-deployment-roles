@@ -2,57 +2,29 @@
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "NonResourceBasedPermissions",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:CancelSpotInstanceRequests",
-                "ec2:DescribeAvailabilityZones",
-                "ec2:DescribeIamInstanceProfileAssociations",
-                "ec2:DescribeInstanceStatus",
-                "ec2:DescribeInstances",
-                "ec2:DescribeInternetGateways",
-                "ec2:DescribeNatGateways",
-                "ec2:DescribeNetworkAcls",
-                "ec2:DescribePrefixLists",
-                "ec2:DescribeReservedInstancesOfferings",
-                "ec2:DescribeRouteTables",
-                "ec2:DescribeSecurityGroups",
-                "ec2:DescribeSpotInstanceRequests",
-                "ec2:DescribeSpotPriceHistory",
-                "ec2:DescribeSubnets",
-                "ec2:DescribeVolumes",
-                "ec2:DescribeVpcAttribute",
-                "ec2:DescribeVpcs",
-                "ec2:RequestSpotInstances"
-            ],
-            "Resource": [
-                "*"
-            ]
-        },
-        {
             "Sid": "CreateTagsNotResource",
             "Effect": "Allow",
             "Action": "ec2:CreateTags",
             "NotResource": [
-                "arn:aws:ec2:us-west-2::image/*",
-                "arn:aws:ec2:us-west-2:108986430055:capacity-reservation/*",
-                "arn:aws:ec2:us-west-2:108986430055:client-vpn-endpoint/*",
-                "arn:aws:ec2:us-west-2:108986430055:customer-gateway/*",
-                "arn:aws:ec2:us-west-2:108986430055:dedicated-host/*",
-                "arn:aws:ec2:us-west-2:108986430055:dhcp-options/*",
-                "arn:aws:ec2:us-west-2:108986430055:egress-only-internet-gateway/*",
-                "arn:aws:ec2:us-west-2:108986430055:elastic-gpu/*",
-                "arn:aws:ec2:us-west-2:108986430055:elastic-ip/*",
-                "arn:aws:ec2:us-west-2:108986430055:export-image-task/*",
-                "arn:aws:ec2:us-west-2:108986430055:export-instance-task/*",
-                "arn:aws:ec2:us-west-2:108986430055:fleet/*",
-                "arn:aws:ec2:us-west-2::fpga-image/*",
-                "arn:aws:ec2:us-west-2:108986430055:host-reservation/*",
-                "arn:aws:ec2:us-west-2:108986430055:import-image-task/*",
-                "arn:aws:ec2:us-west-2:108986430055:import-snapshot-task/*",
-                "arn:aws:ec2:us-west-2:108986430055:instance/*",
-                "arn:aws:ec2:us-west-2:108986430055:instance-event-window/*",
-                "arn:aws:ec2:us-west-2:108986430055:internet-gateway/*"
+                "arn:aws:ec2:REGION::image/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:capacity-reservation/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:client-vpn-endpoint/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:customer-gateway/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:dedicated-host/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:dhcp-options/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:egress-only-internet-gateway/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:elastic-gpu/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:elastic-ip/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:export-image-task/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:export-instance-task/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:fleet/*",
+                "arn:aws:ec2:REGION::fpga-image/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:host-reservation/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:import-image-task/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:import-snapshot-task/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:instance-event-window/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:internet-gateway/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:instance/*"
             ]
         },
         {
@@ -60,24 +32,23 @@
             "Effect": "Allow",
             "Action": "ec2:CreateTags",
             "Resource": [
-                "arn:aws:ec2:us-west-2:108986430055:capacity-reservation/*",
-                "arn:aws:ec2:us-west-2:108986430055:client-vpn-endpoint/*",
-                "arn:aws:ec2:us-west-2:108986430055:customer-gateway/*",
-                "arn:aws:ec2:us-west-2:108986430055:dedicated-host/*",
-                "arn:aws:ec2:us-west-2:108986430055:dhcp-options/*",
-                "arn:aws:ec2:us-west-2:108986430055:egress-only-internet-gateway/*",
-                "arn:aws:ec2:us-west-2:108986430055:elastic-gpu/*",
-                "arn:aws:ec2:us-west-2:108986430055:elastic-ip/*",
-                "arn:aws:ec2:us-west-2:108986430055:export-image-task/*",
-                "arn:aws:ec2:us-west-2:108986430055:export-instance-task/*",
-                "arn:aws:ec2:us-west-2:108986430055:fleet/*",
-                "arn:aws:ec2:us-west-2::fpga-image/*",
-                "arn:aws:ec2:us-west-2:108986430055:host-reservation/*",
-                "arn:aws:ec2:us-west-2:108986430055:import-image-task/*",
-                "arn:aws:ec2:us-west-2:108986430055:import-snapshot-task/*",
-                "arn:aws:ec2:us-west-2:108986430055:instance/*",
-                "arn:aws:ec2:us-west-2:108986430055:instance-event-window/*",
-                "arn:aws:ec2:us-west-2:108986430055:internet-gateway/*"
+                "arn:aws:ec2:REGION:ACCOUNTID:capacity-reservation/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:client-vpn-endpoint/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:customer-gateway/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:dedicated-host/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:dhcp-options/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:egress-only-internet-gateway/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:elastic-gpu/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:elastic-ip/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:export-image-task/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:export-instance-task/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:fleet/*",
+                "arn:aws:ec2:REGION::fpga-image/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:host-reservation/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:import-image-task/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:import-snapshot-task/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:instance-event-window/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:internet-gateway/*"
             ],
             "Condition": {
                 "StringEquals": {
@@ -86,11 +57,24 @@
             }
         },
         {
+            "Sid": "CreateTagsForInstances",
+            "Effect": "Allow",
+            "Action": "ec2:CreateTags",
+            "Resource": [
+                "arn:aws:ec2:REGION:ACCOUNTID:instance/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "aws:RequestTag/Vendor": "Databricks"
+                }
+            }
+        },
+        {
             "Sid": "AllowCreateTagsImagePerTag",
             "Effect": "Allow",
             "Action": "ec2:CreateTags",
             "Resource": [
-                "arn:aws:ec2:us-west-2::image/*"
+                "arn:aws:ec2:REGION::image/*"
             ],
             "Condition": {
                 "StringEquals": {
@@ -108,183 +92,6 @@
             "Condition": {
                 "StringEquals": {
                     "ec2:ResourceTag/Vendor": "Databricks"
-                }
-            }
-        },
-        {
-            "Sid": "InstancePoolsSupport",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:AssociateIamInstanceProfile",
-                "ec2:DisassociateIamInstanceProfile",
-                "ec2:ReplaceIamInstanceProfileAssociation"
-            ],
-            "Resource": "arn:aws:ec2:us-west-2:108986430055:instance/*",
-            "Condition": {
-                "StringEquals": {
-                    "ec2:ResourceTag/Vendor": "Databricks"
-                }
-            }
-        },
-        {
-            "Sid": "AllowEc2RunInstancePerTag",
-            "Effect": "Allow",
-            "Action": "ec2:RunInstances",
-            "Resource": [
-                "arn:aws:ec2:us-west-2:108986430055:volume/*",
-                "arn:aws:ec2:us-west-2:108986430055:instance/*"
-            ],
-            "Condition": {
-                "StringEquals": {
-                    "aws:RequestTag/Vendor": "Databricks"
-                }
-            }
-        },
-        {
-            "Sid": "AllowEc2RunInstanceImagePerTag",
-            "Effect": "Allow",
-            "Action": "ec2:RunInstances",
-            "Resource": [
-                "arn:aws:ec2:us-west-2::image/*"
-            ],
-            "Condition": {
-                "StringEquals": {
-                    "ec2:Owner": "601306020600"
-                }
-            }
-        },
-        {
-            "Sid": "AllowEc2RunInstancePerVPCid",
-            "Effect": "Allow",
-            "Action": "ec2:RunInstances",
-            "Resource": [
-                "arn:aws:ec2:us-west-2:108986430055:network-interface/*",
-                "arn:aws:ec2:us-west-2:108986430055:subnet/*",
-                "arn:aws:ec2:us-west-2:108986430055:security-group/*"
-            ],
-            "Condition": {
-                "StringEquals": {
-                    "ec2:vpc": "arn:aws:ec2:us-west-2:108986430055:vpc/vpc-01320b47fb093ef0b"
-                }
-            }
-        },
-        {
-            "Sid": "AllowEc2RunInstanceElasticInference",
-            "Effect": "Allow",
-            "Action": "ec2:RunInstances",
-            "Resource": [
-                "arn:aws:elastic-inference:us-west-2:108986430055:elastic-inference-accelerator/*"
-            ]
-        },
-        {
-            "Sid": "AllowEc2RunInstanceOtherResources2",
-            "Effect": "Allow",
-            "Action": "ec2:RunInstances",
-            "Resource": [
-                "arn:aws:ec2:us-west-2:108986430055:capacity-reservation/*",
-                "arn:aws:ec2:us-west-2:108986430055:elastic-gpu/*",
-                "arn:aws:ec2:us-west-2:108986430055:key-pair/*",
-                "arn:aws:ec2:us-west-2:108986430055:launch-template/*",
-                "arn:aws:ec2:us-west-2:108986430055:placement-group/*",
-                "arn:aws:ec2:us-west-2::snapshot/*"
-            ],
-            "Condition": {
-                "StringEquals": {
-                    "ec2:ResourceTag/Vendor": "Databricks"
-                }
-            }
-        },
-        {
-            "Sid": "EC2TerminateInstancesTag",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:TerminateInstances"
-            ],
-            "Resource": [
-                "arn:aws:ec2:us-west-2:108986430055:instance/*"
-            ],
-            "Condition": {
-                "StringEquals": {
-                    "ec2:ResourceTag/Vendor": "Databricks"
-                }
-            }
-        },
-        {
-            "Sid": "EC2AttachDetachVolumeTag",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:AttachVolume",
-                "ec2:DetachVolume"
-            ],
-            "Resource": [
-                "arn:aws:ec2:us-west-2:108986430055:instance/*",
-                "arn:aws:ec2:us-west-2:108986430055:volume/*"
-            ],
-            "Condition": {
-                "StringEquals": {
-                    "ec2:ResourceTag/Vendor": "Databricks"
-                }
-            }
-        },
-        {
-            "Sid": "EC2CreateVolumeByTag",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:CreateVolume"
-            ],
-            "Resource": [
-                "arn:aws:ec2:us-west-2:108986430055:volume/*"
-            ],
-            "Condition": {
-                "StringEquals": {
-                    "aws:RequestTag/Vendor": "Databricks"
-                }
-            }
-        },
-        {
-            "Sid": "EC2DeleteVolumeByTag",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:DeleteVolume"
-            ],
-            "Resource": [
-                "arn:aws:ec2:us-west-2:108986430055:volume/*"
-            ],
-            "Condition": {
-                "StringEquals": {
-                    "ec2:ResourceTag/Vendor": "Databricks"
-                }
-            }
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "iam:CreateServiceLinkedRole",
-                "iam:PutRolePolicy"
-            ],
-            "Resource": "arn:aws:iam::*:role/aws-service-role/spot.amazonaws.com/AWSServiceRoleForEC2Spot",
-            "Condition": {
-                "StringLike": {
-                    "iam:AWSServiceName": "spot.amazonaws.com"
-                }
-            }
-        },
-        {
-            "Sid": "VpcNonresourceSpecificActions",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:AuthorizeSecurityGroupEgress",
-                "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:RevokeSecurityGroupEgress",
-                "ec2:RevokeSecurityGroupIngress"
-            ],
-            "Resource": [
-                "arn:aws:ec2:us-west-2:108986430055:security-group/sg-02edcc04a46cb2100",
-                "arn:aws:ec2:us-west-2:108986430055:security-group/sg-0a68932926ea9cbd1"
-            ],
-            "Condition": {
-                "StringEquals": {
-                    "ec2:vpc": "arn:aws:ec2:us-west-2:108986430055:vpc/vpc-01320b47fb093ef0b"
                 }
             }
         }
