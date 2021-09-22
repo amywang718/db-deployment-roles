@@ -30,7 +30,23 @@
             ]
         },
         {
-            "Sid": "AllowCreateTagsForInstances",
+            "Sid": "AllowCreateTagsForNewInstances",
+            "Effect": "Allow",
+            "Action": "ec2:CreateTags",
+            "Resource": [
+                "arn:aws:ec2:REGION:ACCOUNTID:instance/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:volume/*"
+            ],
+            "Condition": {
+                "StringEquals": {
+                    "ec2:CreateAction": [
+                        "RunInstances",
+                        "CreateVolume"
+                    ]
+            }
+        },
+        {
+            "Sid": "AllowCreateTagsForRestartInstances",
             "Effect": "Allow",
             "Action": "ec2:CreateTags",
             "Resource": [
