@@ -2,66 +2,12 @@
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "CreateTagsNotResource",
-            "Effect": "Allow",
-            "Action": "ec2:CreateTags",
-            "NotResource": [
-                "arn:aws:ec2:REGION::image/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:capacity-reservation/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:client-vpn-endpoint/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:customer-gateway/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:dedicated-host/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:dhcp-options/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:egress-only-internet-gateway/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:elastic-gpu/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:elastic-ip/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:export-image-task/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:export-instance-task/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:fleet/*",
-                "arn:aws:ec2:REGION::fpga-image/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:host-reservation/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:import-image-task/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:import-snapshot-task/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:instance-event-window/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:internet-gateway/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:instance/*"
-            ]
-        },
-        {
-            "Sid": "CreateTags",
+            "Sid": "AllowCreateTagsForInstances",
             "Effect": "Allow",
             "Action": "ec2:CreateTags",
             "Resource": [
-                "arn:aws:ec2:REGION:ACCOUNTID:capacity-reservation/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:client-vpn-endpoint/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:customer-gateway/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:dedicated-host/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:dhcp-options/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:egress-only-internet-gateway/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:elastic-gpu/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:elastic-ip/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:export-image-task/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:export-instance-task/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:fleet/*",
-                "arn:aws:ec2:REGION::fpga-image/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:host-reservation/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:import-image-task/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:import-snapshot-task/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:instance-event-window/*",
-                "arn:aws:ec2:REGION:ACCOUNTID:internet-gateway/*"
-            ],
-            "Condition": {
-                "StringEquals": {
-                    "aws:ResourceTag/Vendor": "Databricks"
-                }
-            }
-        },
-        {
-            "Sid": "CreateTagsForInstances",
-            "Effect": "Allow",
-            "Action": "ec2:CreateTags",
-            "Resource": [
-                "arn:aws:ec2:REGION:ACCOUNTID:instance/*"
+                "arn:aws:ec2:REGION:ACCOUNTID:instance/*",
+                "arn:aws:ec2:REGION:ACCOUNTID:volume/*"
             ],
             "Condition": {
                 "StringEquals": {
