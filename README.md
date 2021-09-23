@@ -28,7 +28,7 @@ Replace the following values in the [policy](e2-custom-vpc-policy) with your own
 
 ### Customer-managed VPC with Restrictions on Tags that can be attached to instances
 
-The tags or keys specified in the [policy](e2-custom-vpc-disable-custom-tag-policy) are the ones that are launched with different cluster types by default. By adding this set you are essentially disabling the ability of front end users from adding their own custom tags.
+The tags or keys specified in the [policy](e2-custom-vpc-disable-custom-tag-policy) are the ones that are launched with different cluster types by default. By adding this set you are essentially disabling the ability of front end users from adding their own custom tags. Read more on [Databricks Docs: Monitoring with Tags](https://docs.databricks.com/administration-guide/account-settings/usage-detail-tags-aws.html).
 
 |Resource | Tag key name	 | value |
 | ----------- | ----------- | ----------- |
