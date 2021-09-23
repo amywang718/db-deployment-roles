@@ -55,7 +55,8 @@
             ],
             "Condition": {
                 "StringEquals": {
-                    "aws:RequestTag/Vendor": "Databricks"
+                    "aws:RequestTag/Vendor": "Databricks",
+                    "ec2:ResourceTag/Vendor": "Databricks"
                 }
             }
         },
